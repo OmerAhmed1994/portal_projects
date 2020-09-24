@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="portal_projects_rule_id" model="ir.rule">
+            <field name="name">portal projects rule</field>
+            <field name="model_id" ref="sale.model_sale_order"/>
+            <field name="domain_force">['|',('user_id', 'in', user.all_child_ids.ids),('user_id', '=', user.id)]</field>
+        </record>
+    </data>
+</odoo>
