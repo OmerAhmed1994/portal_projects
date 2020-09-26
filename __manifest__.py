@@ -6,7 +6,7 @@
     'author': 'sonod',
     'summary': "Portal project" ,
     'description': "Portal project",
-    'depends': ['sale'],
+    'depends': ['sale','sale_management'],
     'data': [
         'security/ir.model.access.csv',
         'security/security.xml',

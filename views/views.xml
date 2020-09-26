@@ -16,5 +16,37 @@
                 </xpath>
             </field>
         </record>
+        <record id="view_order_form" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group" position="after">
+                    <group>
+                        <group>
+                            <field name="through_distributor" />    
+                            <field name="project_tender_name" />    
+                            <field name="project_tender_nu" />    
+                            <field name="end_user" />    
+                            <field name="consultant" />    
+                            <field name="mep_contractor" />    
+                            <field name="main_contractor" />    
+                            <field name="project_address" />    
+                        </group>
+                        <group>
+                            <field name="registered_by" />    
+                            <field name="registered_date" />    
+                            <field name="announced_date" />    
+                            <field name="bidding_date" />    
+                            <field name="winning_date" />    
+                            <field name="purchasing_date" />    
+                            <field name="executing_date" />    
+                            <field name="budgetary" />    
+                            <field name="competitors" />    
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
     </data>
 </odoo>

@@ -34,3 +34,26 @@ class ResUsers(models.Model):
         if not self._check_recursion():
             raise ValidationError(_('You cannot create recursive user.'))
         return True
+
+
+class SaleOrder(models.Model):
+    _inherit = 'sale.order'
+
+    through_distributor = fields.Char()
+    project_tender_name = fields.Char('Project\Tender Name')
+    project_tender_nu = fields.Char('Project\Tender Nu#')
+    end_user = fields.Char()
+    consultant = fields.Char()
+    mep_contractor = fields.Char()
+    main_contractor = fields.Char()
+    project_address = fields.Text()
+    registered_by = fields.Char()
+
+    registered_date = fields.Date()
+    announced_date = fields.Date()
+    bidding_date = fields.Date()
+    winning_date = fields.Date()
+    purchasing_date = fields.Date()
+    executing_date = fields.Date()
+    budgetary = fields.Char()
+    competitors = fields.Text()
